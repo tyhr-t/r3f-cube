@@ -6,7 +6,8 @@ const Cube = ({ position, size, color }) => {
   const ref = useRef();
   useFrame((state, delta) => {
     ref.current.rotation.x += delta;
-    ref.current.rotation.y += delta;
+    ref.current.rotation.y += delta * 2;
+    ref.current.rotation.z += delta * 3;
   });
   return (
     <mesh position={position} ref={ref}>
